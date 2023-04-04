@@ -56,7 +56,7 @@ Refer to [RHEL8-CIS-Audit](https://github.com/ansible-lockdown/RHEL8-CIS-Audit).
 
 RHEL/AlmaLinux/Rocky/Oracle 8 - Other versions are not supported.
 
-- AlmaLinux/Rocky Has been tested on 8.4(enabling crypto (sections 1.10&1.11) breaks updating or installs 01Jul2021
+- AlmaLinux/Rocky Has been tested on 8.4 enabling crypto (sections 1.10&1.11) breaks updating or installs 01Jul2021
 - Access to download or add the goss binary and content to the system if using auditing (other options are available on how to get the content to the system.)
 
 ## General
@@ -116,45 +116,6 @@ ok: [default] => {
 PLAY RECAP *******************************************************************************************************************************************
 default                    : ok=270  changed=23   unreachable=0    failed=0    skipped=140  rescued=0    ignored=0
 ```
-
-## Branches
-
-- devel - This is the default branch and the working development branch. Community pull requests will pull into this branch
-- main - This is the release branch
-- reports - This is a protected branch for our scoring reports, no code should ever go here
-- all other branches** - Individual community member branches
-
-## Lifecycle of releases and branches
-
-While Remediate and Audit are managed individually some of the content is linked. Ther are occasions where both need updating or just one of them.
-
-As a general rule we try to abide to the following lifecycle process for branches and releases inclduing ansible-galaxy sync updates. Being community we do have direct customer requests
-and requirements will take priority in releases.
-
-- devel branch
-  - Staging area for bug fixes PRs and new benchmarks.
-
-    We aim to get the majority of PRs merged to devel in 2-4 weeks.
-
-- Main branch
-  - Merge of devel in to main.
-
-    This is dependant on the severity and impact of issues closed. Normally a release alignment every 8-12 weeks (sometimes much quicker)
-
-  - New benchmark version release.
-
-    Once a new benchmark has been released by the provider we aim to get to a new tagged release in 2-4 weeks
-
-  - This is also the where the releases are sourced and linked with ansible-galaxy.
-
-## Community Contribution
-
-We encourage you (the community) to contribute to this role. Please read the rules below.
-
-- Your work is done in your own individual branch. Make sure to Signed-off and GPG sign all commits you intend to merge.
-- All community Pull Requests are pulled into the devel branch
-- Pull Requests into devel will confirm your commits have a GPG signature, Signed-off, and a functional test before being approved
-- Once your changes are merged and a more detailed review is complete, an authorized member will merge your changes into the main branch for a new release
 
 ## Pipeline Testing
 
