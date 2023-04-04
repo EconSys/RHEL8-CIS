@@ -11,8 +11,10 @@ packer_cache
 delete*
 ignore*
 test_inv
-# VSCode
-.vscode
+
+# code editor files
+.vscode/
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
