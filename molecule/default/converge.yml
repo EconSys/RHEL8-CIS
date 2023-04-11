@@ -1,7 +1,7 @@
 ---
 # This is a playbook to test the tasks.
 - name: Converge
-  hosts: all
+  hosts: localhost
   gather_facts: true
 
   vars:
