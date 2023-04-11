@@ -37,7 +37,7 @@ In order to run level(1|2)-server level(1|2)-workstation  This is carried out vi
 e.g.
 
 ``` shell
-ansible-playbook -l test-server -i test_inv site.yml -t level1-server
+ansible-playbook -i inventory site.yml -t level1-server,level2-server
 
 ```
 
