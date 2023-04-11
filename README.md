@@ -37,8 +37,18 @@ In order to run specific level(1|2)-server level(1|2)-workstation  This is carri
 e.g.
 
 ``` shell
-ansible-playbook -i inventory site.yml -t level1-server
+ansible-playbook site.yml -t level1-server
 ```
+
+Note that the host inventory file, inventory.ini, does not need to be explicitly defined upon invoking `ansible-playbook` command. Inventory plugin will look for an inventory file with the various formats and parse for an _inventory source_ until if finds one, as seen in following output:
+
+```shell
+host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Parsed /etc/ansible/hosts inventory source with ini plugin
+```
+
 
 ## Auditing (new)
 
