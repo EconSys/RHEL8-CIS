@@ -1,7 +1,23 @@
 ---
 - hosts: all  # noqa: name[play]
   become: true
+  gather_facts: true
+  ignore_errors: true
+
+  pre_tasks:
+    - name: install packages for testing under docker
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - selinux-policy
+        - libselinux-python
+        - openssh-server
+        - which
 
   roles:
-
       - role: "{{ playbook_dir }}"
+      # - role: "{{ benchmark }}"  # default variable is RHEL8-CIS
+      # - role: rhel8_cis
+      # - role: rhel8cis
+      # - role: "{{ playbook_dir }}/roles/RHEL8-CIS"
