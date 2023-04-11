@@ -138,9 +138,10 @@
       - rule_3.4.3.2.4
 
 - name: "3.4.3.2.5 | PATCH | Ensure iptables rules are saved"
-  iptables_state:
+  community.general.iptables_state:
       state: saved
       path: /etc/sysconfig/iptables
+      ip_version: ipv4
   when:
       - rhel8cis_rule_3_4_3_2_5
       - rhel8cis_firewall == "iptables"
