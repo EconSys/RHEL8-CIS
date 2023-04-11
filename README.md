@@ -32,13 +32,12 @@ To use release version please point to main branch
 ### Running level1 or level2 only
 
 While the defaults/main.yml has the options this is used for auditing purposes.
-In order to run level(1|2)-server level(1|2)-workstation  This is carried out via tags.
+In order to run specific level(1|2)-server level(1|2)-workstation  This is carried out via tags. Otherwise, leaving out the tag defaults to running all tasks.
 
 e.g.
 
 ``` shell
-ansible-playbook -i inventory site.yml -t level1-server,level2-server
-
+ansible-playbook -i inventory site.yml -t level1-server
 ```
 
 ## Auditing (new)
