@@ -138,7 +138,7 @@
       - rule_3.4.3.2.4
 
 - name: "3.4.3.2.5 | PATCH | Ensure iptables rules are saved"
-  community.general.iptables_state:
+  iptables_state:
       state: saved
       path: /etc/sysconfig/iptables
       ip_version: ipv4
