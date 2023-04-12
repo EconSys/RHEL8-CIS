@@ -130,7 +130,7 @@
       - rule_3.4.3.3.4
 
 - name: "3.4.3.3.5 | PATCH | Ensure ip6tables rules are saved"
-  community.general.iptables_state:
+  iptables_state:
       state: saved
       path: /etc/sysconfig/ip6tables
       ip_version: ipv6
