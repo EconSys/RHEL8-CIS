@@ -1,6 +1,6 @@
 ---
 - name: Verify
-  hosts: localhost
+  hosts: local
   gather_facts: false
   become: true
 
