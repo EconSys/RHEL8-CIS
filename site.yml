@@ -1,5 +1,5 @@
 ---
-- hosts: local  # noqa: name[play]
+- hosts: localhost  # noqa: name[play]
   become: true
   gather_facts: true
   ignore_errors: true
